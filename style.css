@@ -1,0 +1,377 @@
+/* inter-400 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('inter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('inter-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-400 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
+  unicode-range: U+0041;
+}
+/* plus-jakarta-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
+  unicode-range: U+0041;
+}
+
+:root {
+	--primary: #86543A;
+	--primaryLight: #EED7C5;
+	--secondary: #03045E;
+	--third: #CAF0F8;
+	--font: #000;
+    --h1: calc(2rem + 2vw);
+    --h2: calc(1.3rem + 1vw);
+    --h3: calc(1rem + 0.6vw);
+    --p: calc(1rem + 0.5vw);
+    --m-h1: 1.75rem;
+    --border: 20px;
+    --max: 1500px;
+    --portfolioHeight: 500px;
+}
+/** {border: solid red 1px !important;}*/
+* {box-sizing: border-box;}
+
+body {
+    font-family: Inter;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100vw;
+    position: relative;
+
+}
+
+li {
+	list-style: none;
+}
+a {
+    border: none;
+	text-decoration: none;
+    color: var(--font);
+}
+h1, p, h2, h3 {
+    color: var(--font);
+}
+h1 {
+    font-size: var(--h1);
+}
+h2 {
+    font-size: var(--h2);
+}
+h3 {
+    font-size: var(--h3);
+}
+p {
+    font-size: var(--p);
+}
+button {
+    display: flex;
+    column-gap: 8px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    /*font-weight: 600;*/
+    padding: 18px 32px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+}
+.button:hover {
+    transform: scale(1.05);
+}
+
+
+
+ /*     ---------------------------------------
+        ---------------------------------------
+        ---------------------------------------
+        ----------MOBILE iPhone/ONLY-----------
+        ---------------------------------------
+        ---------------------------------------
+        ---------------------------------------  */
+@media only screen and (min-width: 0rem) {
+/*#services .cards-list li {
+    list-style: inherit;
+}
+#services .cards-list li::marker {
+    color: var(--primary);
+    content: var(--primary);
+}*/
+.service-card3 div {
+    background-color: var(--primary);
+}
+
+#faqs {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 95vw;
+    background-color: #e9e9e9;
+    padding: 25px;
+    margin: 30px auto;
+    row-gap: 27px;
+}
+#faqs .question-cont {
+    background-color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+#faqs .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#faqs .answer {
+    display: none;
+}
+#faqs .show-answer {
+    display: inherit;
+    border-top: 1.5px solid #000;
+    margin-top: 12px;
+    padding-top: 10px;
+}
+footer {
+    width: 100vw;
+    background-color: var(--secondary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+}
+footer .footer-company {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 0 0 0;
+    margin: 0 auto;
+}
+footer .footer-company strong a {
+    color: #fff;
+    font-size: var(--h2);
+}
+footer .footer-company strong a span {
+    color: var(--primary);
+}
+footer .footer-company p {
+    color: #fff;
+    width: 85%;
+    font-size: var(--p);
+    text-align: center;
+}
+footer .footer-links {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    padding: 0;
+}
+footer .footer-links li:nth-child(1) {
+    font-size: var(--h2);
+}
+footer .footer-links li a {
+    color: #fff;
+    font-size: var(--p);
+}
+footer .footer-contact {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 0;
+}
+footer .footer-contact li:nth-child(1) {
+    font-size: var(--h2);
+}
+footer .footer-contact li a, footer .footer-contact li {
+    color: #fff;
+    font-size: var(--p);
+}
+footer .copyright-hc-branding {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .copyright-cont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 7px;
+}
+footer .copyright-cont img {
+    width: var(--p);
+    height: auto;
+}
+footer .copyright-cont span {
+    font-size: var(--p);
+}
+footer .harvest-clicks {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+footer .harvest-clicks span a {
+    font-size: var(--p);
+    color: #E7D09F;
+}
+
+
+/*     ---------------------------------------
+       ---------------------------------------
+       -------Interior pages iPhone/ONLY------
+       ---------------------------------------
+       --------------------------------------- */
+.portfolio-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    width: 90vw;
+}
+#portfolio {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    row-gap: 40px;
+}
+.project {
+    width:100%;
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.portfolio-cont .project h2, .portfolio-cont .project p {
+    margin: 0;
+}
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.wp-block-gallery {
+    width: 95vw;
+    background-color: #fff;
+    position: absolute;
+    top: var(--portfolioHeight);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 30px 0;
+    margin: 40px 0;
+    border: var(--primary) solid 2.5px;
+    border-top: var(--primary) solid 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 10px var(--primaryLight);
+}
+.wp-block-image {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+.wp-block-gallery img {
+    width: 85%;
+}
+.project button span {
+    white-space: nowrap;
+}
+.project button {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-items: center;
+}
+.project button img {
+    width: 1rem;
+}
+.portfolio-open img {
+    transform: rotate(90deg);
+}
+.bottom-btn {
+    background-color: inherit;
+    border: var(--primary) solid 2.75px;
+    color: var(--primary);
+}
+.bottom-btn img {
+    transform: rotate(-90deg);
+}
+.hidden {
+    display: none;
+}
+
+
+}
+
+ /*     ---------------------------------------
+        ---------------------------------------
+        ---------------------------------------
+        --------MOBILE iPAD/only (772px)-------
+        ---------------------------------------
+        ---------------------------------------
+        ---------------------------------------  */
+@media only screen and (min-width: 48.3rem) {
+
+
+
+}
+
+ /*     ---------------------------------------
+        ---------------------------------------
+        ---------------------------------------
+        -----------DESKTOP/LAPTOP--------------
+        ---------------------------------------
+        ---------------------------------------
+        ---------------------------------------  */
+@media only screen and (min-width: 64rem) {
+
+/*     ---------------------------------------
+       ---------------------------------------
+       ---------Home Page desktop/ONLY--------
+       ---------------------------------------
+       --------------------------------------- */
+
+}
+@media only screen and (min-width: 1150px) {
+
+
+
+}
+
+
+
