@@ -44,6 +44,8 @@
     --h3: calc(1rem + 0.6vw);
     --p: calc(1rem + 0.5vw);
     --m-h1: 1.75rem;
+    --m-h2: 1.5rem;
+    --m-btn: 1.25rem;
     --border: 20px;
     --max: 1500px;
     --portfolioHeight: 500px;
@@ -89,17 +91,13 @@ button {
     column-gap: 8px;
     border-radius: 10px;
     background-color: var(--primary);
-    /*font-weight: 600;*/
     padding: 18px 32px;
     width: auto;
     height: auto;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: var(--m-btn);
     text-align: center;
     border: none;
-}
-.button:hover {
-    transform: scale(1.05);
 }
 
  /*     ---------------------------------------
@@ -110,16 +108,27 @@ button {
         ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 0rem) {
+button a {
+    font-size: var(--m-btn);
+}
+button img {
+    width: var(--m-btn);
+    height: auto;
+}
+
 .navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 10px 0;
-    position: relative;
+    position: sticky;
+    top: 5px;
+    left: 0;
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 0 3px 5px var(--third);
     z-index: 1000;
+    background-color: #fff;
 }
 .navigation .logo {
     width: 90px;
@@ -206,8 +215,51 @@ button {
        ----------Home Page iPhone/ONLY--------
        ---------------------------------------
        --------------------------------------- */
-
-
+#hero {
+    position: relative;
+    padding-bottom: 5px;
+}
+#hero picture {
+    width: 98vw;
+    display: block;
+    margin: 10px auto;
+}
+#hero img {
+    width: 100%;
+    border-radius: 5px;
+}
+#hero .hero-content {
+    width: 90vw;
+    border: 1px solid var(--secondary);
+    border-radius: 20px;
+    margin: 5px auto;
+    padding: 20px;
+}
+#hero .hero-content h1 {
+    margin-top: 0;
+    font-size: var(--m-h1);
+    text-align: center;
+}
+#hero .hero-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    row-gap: 20px;
+    justify-content: center;
+}
+#hero .hero-buttons a {
+    color: #fff;
+}
+#hero .hero-buttons img {
+    width: var(--m-btn);
+}
+#hero .hero-buttons .hero-portfolio-btn {
+    background-color: #fff;
+    border: 1px solid var(--secondary);
+}
+#hero .hero-buttons .hero-portfolio-btn a {
+    color: var(--secondary);
+}
 
 
 
@@ -230,8 +282,11 @@ button {
         ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 48.3rem) {
-
-
+#hero .hero-content {
+    position: absolute;
+    top: 250px;
+    background-color: rgba(2, 5, 43, 0.35);
+}
 
 }
 

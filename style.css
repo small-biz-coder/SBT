@@ -89,7 +89,6 @@ button {
     column-gap: 8px;
     border-radius: 10px;
     background-color: var(--primary);
-    /*font-weight: 600;*/
     padding: 18px 32px;
     width: auto;
     height: auto;
@@ -112,13 +111,11 @@ button {
         ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 0rem) {
-/*#services .cards-list li {
-    list-style: inherit;
+
+
+#services {
+    margin: 20px auto;
 }
-#services .cards-list li::marker {
-    color: var(--primary);
-    content: var(--primary);
-}*/
 .service-card3 div {
     background-color: var(--primary);
 }
@@ -152,6 +149,11 @@ button {
     margin-top: 12px;
     padding-top: 10px;
 }
+
+
+
+
+
 footer {
     width: 100vw;
     background-color: var(--secondary);
@@ -359,7 +361,18 @@ footer .harvest-clicks span a {
         ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 64rem) {
-
+.services-content ul li {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 40vw;
+}
+.services-content ul li span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
 /*     ---------------------------------------
        ---------------------------------------
        ---------Home Page desktop/ONLY--------

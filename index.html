@@ -9,9 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="critical-home.css">
 	<link rel="preload" href="style.css" as="style" 
       onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="/css/local.css">
-</noscript>
+    <noscript>
+        <link rel="stylesheet" href="/css/local.css">
+    </noscript>
 	
 </head>
 <body>
@@ -30,7 +30,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li class="menu-cta"><img src="phone.svg" width="40px" height="40px" decoding="async" alt=""><a href="tel:+17179407909">717 940 7909</a></li>
+            <li class="menu-cta"><img src="phone-icon.svg" width="40px" height="40px" decoding="async" alt=""><a href="tel:+17179407909">717 940 7909</a></li>
         </ul>
     </nav>
 
@@ -179,7 +179,7 @@
     </div>
 </section>
 
-<section id="home-cta">
+<section id="home-services-cta">
     <h2>Ready To Start Your Project?</h2>
     <p>Let's bring your vision to life. Contact us today for a free consultation and quote.</p>
     <button>
@@ -403,7 +403,7 @@
 <footer>
     <div class="footer-company">
         <strong><a href="index.html">South Branch <span>Trades</span></a></strong>
-        <p>We're a small, owner-operated crew that builds custom outdoor structures for homeowners, decks, garages, sheds, and more. Big enough to handle the job, small enough to actually care about it.</p>
+        <p>We're a small, owner-operated crew that builds decks, garages, sheds, and custom outdoor structures for homeowners. Big enough to handle the job, small enough to actually care about it.</p>
     </div>
     <ul class="footer-links">
         <li>Quick Links</li>
@@ -431,7 +431,16 @@
 </footer>
 
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="home.js"></script>
+<script>
+    const faqs = document.querySelectorAll('.question-cont');
+
+    faqs.forEach(questions => {
+        questions.addEventListener('click', () => {
+            const answer = questions.querySelector('.answer')
+            answer.classList.toggle('show-answer')
+        });
+    });
+</script>
 
 </body>
 </html>
