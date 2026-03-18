@@ -62,7 +62,7 @@
         <p>Whether you're adding outdoor living space, building a garage, or expanding your home, South Branch Trades delivers quality craftsmanship tailored to your property — serving homeowners across York County and South-Central Pennsylvania.</p>
     </div>
     <ul class="service-cards">
-        <li class="service-card1">
+        <li class="service-card">
             <div>
                 <picture class="cards-hero">
                     <source srcset="" type="">
@@ -80,7 +80,7 @@
                 <li><span></span>Multi-level Decks</li>
             </ul>
         </li>
-        <li class="service-card2">
+        <li class="service-card">
             <div>
                 <picture class="cards-hero">
                     <source srcset="" type="">
@@ -98,7 +98,7 @@
                 <li><span></span>Custom Sizing & Layouts</li>
             </ul>
         </li>
-        <li class="service-card3">
+        <li class="service-card">
             <div>
                 <picture class="cards-hero">
                     <source srcset="" type="">
@@ -130,29 +130,37 @@
             <picture>
                 <img src="craftsmanship-icon.svg" width="60px" height="60px" decoding="async" loading="lazy" alt="">
             </picture>
-            <strong>Expert Craftsmanship</strong>
-            <p>Years of experience delivering quality work.</p>
+            <div>
+                <strong>Expert Craftsmanship</strong>
+                <p>Years of experience delivering quality work.</p>
+            </div>
         </div>
         <div class="icons-w-content on-time">
             <picture>
                 <img src="clock-icon.svg" width="60px" height="60px" decoding="async" loading="lazy" alt="">
             </picture>
-            <strong>On-Time Delivery</strong>
-            <p>We respect your time and meet our deadlines.</p>
+            <div>
+                <strong>On-Time Delivery</strong>
+                <p>We respect your time and meet our deadlines.</p>
+            </div>
         </div>
         <div class="icons-w-content licensed">
             <picture>
                 <img src="licensed-icon.svg" width="60px" height="60px" decoding="async" loading="lazy" alt="">
             </picture>
-            <strong>Licensed & Insured</strong>
-            <p>Fully certified and covered for your peace of mind.</p>
+            <div>
+                <strong>Licensed & Insured</strong>
+                <p>Fully certified and covered for your peace of mind.</p>
+            </div>
         </div>
         <div class="icons-w-content guarantee">
             <picture>
                 <img src="quality-icon.svg" width="60px" height="60px" decoding="async" loading="lazy" alt="">
             </picture>
-            <strong>Quality Guarantee</strong>
-            <p>Satisfaction guaranteed on every project.</p>
+            <div>
+                <strong>Quality Guarantee</strong>
+                <p>Satisfaction guaranteed on every project.</p>
+            </div>
         </div>
     </div>
     <div class="image-block-cont">
@@ -160,18 +168,14 @@
             <strong>11+</strong>
             <span>Years Experience</span>
         </div>
-        <div class="about-image-block">
-            <picture class="cards-hero">
-                <source srcset="" type="">
-                <img src="pole-barn-garage.jpg" decoding="async" loading="lazy" width="800px" height="" alt="">
-            </picture>
-        </div>
-        <div class="about-image-block">
-            <picture class="cards-hero">
-                <source srcset="" type="">
-                <img src="pool-deck.jpeg" decoding="async" loading="lazy" width="800px" height="" alt="">
-            </picture>
-        </div>
+        <picture class="about-image-block pic1">
+            <source srcset="" type="">
+            <img src="pole-barn-garage.jpg" decoding="async" loading="lazy" width="800px" height="" alt="">
+        </picture>
+        <picture class="about-image-block pic2">
+            <source srcset="" type="">
+            <img src="pool-deck.jpeg" decoding="async" loading="lazy" width="800px" height="" alt="">
+        </picture>
         <div class="about-icon-block blue-block">
             <strong>100's</strong>
             <span>Projects Completed</span>
@@ -294,7 +298,7 @@
             <img class="img2" src="new-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
         </div>
         <button>
-            <a href="contact.html">See Full Project</a>
+            <a href="portfolio.html#port-decks">See Full Project</a>
             <img src="btn-arrow.svg" width="40px" height="40px" decoding="async" loading="lazy" alt="">
         </button>
     </div>
@@ -306,7 +310,7 @@
             <img class="img2" src="barn-renovation-new.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
         </div>
         <button>
-            <a href="contact.html">See Full Project</a>
+            <a href="portfolio.html#port-misc">See Full Project</a>
             <img src="btn-arrow.svg" width="40px" height="40px" decoding="async" loading="lazy" alt="">
         </button>
     </div>
@@ -314,11 +318,11 @@
         <h3>Front Door Entryway Cover</h3>
         <p>We built a solid wood framed portico for this entryway, adding both character and protection from the elements. A small addition that makes a big difference in curb appeal.</p>
         <div class="before-after-pics">
-            <img class="img1" src="old-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
-            <img class="img2" src="new-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
+            <img class="img1" src="portico.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
+            <img class="img2" src="portico-before.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
         </div>
         <button>
-            <a href="contact.html">See Full Project</a>
+            <a href="portfolio.html#port-additions">See Full Project</a>
             <img src="btn-arrow.svg" width="40px" height="40px" decoding="async" loading="lazy" alt="">
         </button>
     </div>
@@ -395,7 +399,7 @@
         <span class="answer">Yes. We will need information about your property, but we submit all the paperwork on your behalf.</span>
     </div>
     <button>
-        <a href="contact.html">See Full Project</a>
+        <a href="contact.html">Get A Free Quote</a>
         <img src="btn-arrow.svg" width="40px" height="40px" decoding="async" loading="lazy" alt="">
     </button>
 </section>
@@ -437,7 +441,9 @@
     faqs.forEach(questions => {
         questions.addEventListener('click', () => {
             const answer = questions.querySelector('.answer')
+            const moveChevron = questions.querySelector('.question')
             answer.classList.toggle('show-answer')
+            moveChevron.classList.toggle('move-chevron')
         });
     });
 </script>

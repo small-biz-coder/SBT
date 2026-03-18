@@ -38,6 +38,7 @@
 	--primaryLight: #EED7C5;
 	--secondary: #03045E;
 	--third: #CAF0F8;
+    --grayBackgrd: #F9FAFB;
 	--font: #000;
     --h1: calc(2rem + 2vw);
     --h2: calc(1.3rem + 1vw);
@@ -110,6 +111,7 @@ button {
 @media only screen and (min-width: 0rem) {
 button a {
     font-size: var(--m-btn);
+    color: #fff;
 }
 button img {
     width: var(--m-btn);
@@ -123,10 +125,9 @@ button img {
     justify-content: space-around;
     padding: 10px 0;
     position: sticky;
-    top: 5px;
+    top: 1px;
     left: 0;
-    border-bottom: 1px solid #e5e5e5;
-    box-shadow: 0 0 3px 5px var(--third);
+    box-shadow: 0 0 1px 3px var(--third);
     z-index: 1000;
     background-color: #fff;
 }
@@ -218,11 +219,12 @@ button img {
 #hero {
     position: relative;
     padding-bottom: 5px;
+    background-color: var(--grayBackgrd);
 }
 #hero picture {
     width: 98vw;
     display: block;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 #hero img {
     width: 100%;
@@ -232,7 +234,7 @@ button img {
     width: 90vw;
     border: 1px solid var(--secondary);
     border-radius: 20px;
-    margin: 5px auto;
+    margin: 0 auto;
     padding: 20px;
 }
 #hero .hero-content h1 {
@@ -246,9 +248,7 @@ button img {
     align-items: center;
     row-gap: 20px;
     justify-content: center;
-}
-#hero .hero-buttons a {
-    color: #fff;
+    margin-top: 15px;
 }
 #hero .hero-buttons img {
     width: var(--m-btn);

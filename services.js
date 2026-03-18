@@ -9,15 +9,15 @@ window.addEventListener('load', async () => {
     ]);
     renderPortfolio(decks,
       document.querySelector('.services-decks'),
-      'portfolio.html#decks-gallery'
+      'portfolio.html#port-decks'
     );
     renderPortfolio(garages,
       document.querySelector('.services-garages'),
-      'portfolio.html#garages-gallery'
+      'portfolio.html#port-garages'
     );
     renderPortfolio(additions,
       document.querySelector('.services-additions'),
-      'portfolio.html#additions-gallery'
+      'portfolio.html#port-additions'
     );
 
   } catch (err) {
