@@ -92,7 +92,7 @@ button {
     column-gap: 8px;
     border-radius: 10px;
     background-color: var(--primary);
-    padding: 18px 32px;
+    padding: 15px 25px;
     width: auto;
     height: auto;
     color: #fff;
@@ -247,6 +247,7 @@ button img {
     flex-flow: row wrap;
     align-items: center;
     row-gap: 20px;
+    column-gap: 20px;
     justify-content: center;
     margin-top: 15px;
 }
@@ -284,9 +285,36 @@ button img {
 @media only screen and (min-width: 48.3rem) {
 #hero .hero-content {
     position: absolute;
-    top: 250px;
-    background-color: rgba(2, 5, 43, 0.35);
+    top: 220px;
+    left: 7vw;
+    background-color: rgba(2, 5, 43, 0.45);
+    width: 55vw;
+    border: none;
 }
+@media only screen and (min-width: 850px) {
+    #hero .hero-content {
+        top: 250px;
+    }
+}
+#hero .hero-content h1 {
+    color: #fff;
+    text-align: left;
+}
+#hero .hero-content p {
+    color: #fff;
+}
+#hero .hero-buttons {
+    justify-content: flex-start;
+}
+#hero .hero-buttons button {
+
+}
+#hero .hero-buttons button a {
+    font-size: 1rem;
+}
+
+
+
 
 }
 
@@ -326,6 +354,12 @@ button img {
 .nav-menu .menu-cta a {
     font-size: 1rem;
 }
+@media only screen and (min-width: 1115px) {
+  #hero .hero-content {
+    width: 45vw;
+}  
+}
+
 
 /*     ---------------------------------------
        ---------------------------------------

@@ -92,7 +92,7 @@ button {
     column-gap: 8px;
     border-radius: 10px;
     background-color: var(--primary);
-    padding: 18px 32px;
+    padding: 15px 25px;
     width: auto;
     height: auto;
     color: #fff;
@@ -191,6 +191,7 @@ button img {
     width: 7px;
     height: 7px;
     border-radius: 50%;
+    flex-shrink: 0;
     background-color: var(--primary);
 }
 #services button {
@@ -306,13 +307,13 @@ button img {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+    align-items: center;
     background-color: var(--grayBackgrd);
 }
 #process .process-block {
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
     width: 87%;
     border-radius: 10px;
-    margin: 0 auto;
     padding: 20px;
 }
 #process .process-icon-block {
@@ -452,6 +453,7 @@ button img {
 }
 #reviews h2 {
     text-align: center;
+    padding: 10vw 0;
 }
 #reviews .review-card {
     width: 75vw;
@@ -722,6 +724,65 @@ footer .harvest-clicks span a {
         ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 48.3rem) {
+#services .service-cards {
+    column-gap: 30px;
+    justify-content: center;
+}
+#services .service-card {
+    width: 27vw;
+}
+#about .icons-cont {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 55px auto;
+}
+#about .icons-w-content {
+    width: 40vw;
+}
+#about .image-block-cont {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin: 55px auto;
+}
+#about .about-icon-block {
+    width: 38%;
+}
+#about .about-image-block {
+    width: 53%;
+}
+#about .image-block-cont .pic2 {
+    order: 0;
+}
+#about .image-block-cont .blue-block {
+    order: 0;
+}
+#process {
+    flex-flow: row wrap;
+    column-gap: 50px;
+    justify-content: center;
+    padding-bottom: 55px;
+}
+#process .header-cont {
+    margin-bottom: 35px;
+}
+#process .process-block {
+    width: 40%;
+}
+#location {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+#location .location-content {
+    width: 45vw;
+}
+#location .location-image img {
+    width: 45vw;
+}
 
 
 

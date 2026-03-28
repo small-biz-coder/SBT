@@ -247,7 +247,9 @@
     faqs.forEach(questions => {
         questions.addEventListener('click', () => {
             const answer = questions.querySelector('.answer')
+            const moveChevron = questions.querySelector('.question')
             answer.classList.toggle('show-answer')
+            moveChevron.classList.toggle('move-chevron')
         });
     });
 </script>
