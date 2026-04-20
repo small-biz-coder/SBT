@@ -269,8 +269,365 @@ button img {
        -------Interior pages iPhone/ONLY------
        ---------------------------------------
        --------------------------------------- */
+/* ---------- #about-hero ---------- */
+#about-hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#about-hero picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+#about-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 5vw;
+    row-gap: 25px;
+}
+#about-hero .hero-content h1 {
+    font-size: var(--m-h1);
+    text-align: center;
+    margin: 0;
+}
+#about-hero .hero-content p {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+#about-hero .hero-content picture {
+    width: 100%;
+    display: block;
+}
+#about-hero .hero-content picture img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border);
+    display: block;
+}
+#about-hero .hero-content picture:nth-of-type(2) {
+    width: 75vw;
+    margin: 0 auto;
+}
+#about-hero .hero-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 40px 0;
+}
+#about-hero .hero-buttons button {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+#about-hero .hero-buttons button a {
+    font-size: var(--m-btn);
+    color: #fff;
+}
+#about-hero .hero-buttons button img {
+    width: var(--m-btn);
+    height: auto;
+}
 
+/*-----------------services------------------*/
+.serv-port-buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 30px auto 40px auto;
+}
+.serv-port-buttons h1 {
+    text-align: center;
+    font-size: var(--m-h1);
+    margin-bottom: 30px;
+}
+.serv-port-buttons p {
+    text-align: center;
+}
+.serv-port-buttons .select-a-service-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 15px;
+}
+.serv-port-buttons .select-a-service-buttons button {
+    padding: 7px 15px;
+    font-size: 1.3rem;
+}
+.show-garages .select-a-service-buttons #decks-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.show-garages .select-a-service-buttons #decks-btn a {
+    color: var(--primary);
+}
+.show-additions .select-a-service-buttons #decks-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.show-additions .select-a-service-buttons #decks-btn a {
+    color: var(--primary);
+}
+.select-a-service-buttons #garages-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.select-a-service-buttons #garages-btn a {
+    color: var(--primary);
+}
+.select-a-service-buttons #additions-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.select-a-service-buttons #additions-btn a {
+    color: var(--primary);
+}
+.show-garages .select-a-service-buttons #garages-btn {
+    background-color: var(--primary);
+    border: none;
+}
+.show-garages .select-a-service-buttons #garages-btn a {
+    color: #fff;
+}
+.show-additions .select-a-service-buttons #additions-btn {
+    background-color: var(--primary);
+    border: none;
+}
+.show-additions .select-a-service-buttons #additions-btn a {
+    color: #fff;
+}
+.services-hero {
+    position: relative;
+}
+.services-hero .hero-pic {
+    display: block;
+    width: 100vw;
+}
+.services-hero .hero-pic img {
+    width: 100%;
+}
+.services-hero .icon-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.services-hero .icon-pic img {
+    width: 62%;
+    height: auto;
+}
 
+/*-------Portfolio--------*/
+
+#portfolio-buttons .select-a-service-buttons {
+    column-gap: 8px;
+}
+#portfolio-buttons .select-a-service-buttons button {
+    padding: 7px 12px;
+}
+#portfolio-buttons .select-a-service-buttons button a {
+    font-size: 1rem;
+}
+.port-additions #port-decks-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.port-additions #port-decks-btn a {
+    color: var(--primary);
+}
+.port-garages #port-decks-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.port-garages #port-decks-btn a {
+    color: var(--primary);
+}
+.port-misc #port-decks-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+.port-misc #port-decks-btn a {
+    color: var(--primary);
+}
+#port-garages-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+#port-garages-btn a {
+    color: var(--primary);
+}
+.port-garages #port-garages-btn {
+    background-color: var(--primary);
+    border: none;
+}
+.port-garages #port-garages-btn a {
+    color: #fff;
+}
+#port-additions-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+#port-additions-btn a {
+    color: var(--primary);
+}
+.port-additions #port-additions-btn {
+    background-color: var(--primary);
+    border: none;
+}
+.port-additions #port-additions-btn a {
+    color: #fff;
+}
+#port-misc-btn {
+    background-color: #fff;
+    border: 1px solid var(--primary);
+}
+#port-misc-btn a {
+    color: var(--primary);
+}
+.port-misc #port-misc-btn {
+    background-color: var(--primary);
+    border: none;
+}
+.port-misc #port-misc-btn a {
+    color: #fff;
+}
+#portfolio-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 0 30px;
+    margin: 30px auto 0 auto;
+}
+#portfolio-buttons h1 {
+    margin: 0;
+}
+#portfolio-buttons p {
+    margin: 0;
+    width: 60vw;
+}
+.port-sections {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.port-sections p:nth-child(2) {
+    width: 90vw;
+    text-align: center;
+    margin-bottom: 35px;
+}
+/* ---------- #contact-hero ---------- */
+#contact-hero {
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+#contact-hero .header-cont {
+    padding: 30px 7vw 0 7vw;
+    text-align: center;
+}
+#contact-hero .header-cont h1 {
+    font-size: var(--m-h1);
+    margin: 0 0 10px 0;
+}
+#contact-hero .header-cont p {
+    margin: 0;
+    width: 85vw;
+}
+#contact-hero > img {
+    width: 95vw;
+    height: auto;
+    display: block;
+    object-position: 30px;
+}
+.contact-hero-content {
+    width: 85vw;
+    border-radius: 15px;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 20px 0;
+    color: #fff;
+}
+.contact-hero-content h2 {
+    color: #fff;
+    font-size: var(--m-h2);
+    margin: 0;
+}
+.contact-hero-icon-cluster {
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: 15px;
+}
+.contact-hero-icon-cluster:nth-of-type(2) a {
+    font-size: 0.83rem;
+}
+
+.contact-hero-icon-cluster picture {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(225, 225, 225, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+.contact-hero-icon-cluster picture img {
+    width: 100%;
+    height: auto;
+}
+.contact-hero-icon-cluster strong {
+    color: #fff;
+    font-size: var(--p);
+    width: calc(100% - 65px);
+}
+.contact-hero-icon-cluster a,
+.contact-hero-icon-cluster span {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--p);
+    margin-left: 65px;
+}
+.business-hours {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.business-hours h3 {
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+.hours-of-operation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+.hours-of-operation span {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--p);
+}
 
 }
 
@@ -306,14 +663,76 @@ button img {
 #hero .hero-buttons {
     justify-content: flex-start;
 }
-#hero .hero-buttons button {
-
-}
 #hero .hero-buttons button a {
     font-size: 1rem;
 }
 
 
+/* ---------- #about-hero ---------- */
+#about-hero picture:first-child img {
+    height: auto;
+}
+#about-hero .hero-content {
+    display: inline;
+    padding: 40px;
+}
+#about-hero .hero-content h1 {
+    font-size: var(--h1);
+    width: 100%;
+}
+#about-hero .hero-content p {
+    margin: 30px 0;
+}
+#about-hero .hero-content picture:nth-of-type(1) {
+    width: 35vw;
+    float: left;
+    margin: 30px 30px 30px 0;
+}
+#about-hero .hero-content picture:nth-of-type(1) img {
+    width: 100%;
+}
+/* ---------- services/portfolio ---------- */
+.serv-port-buttons h1 {
+    width: 60vw;
+}
+.serv-port-buttons .select-a-service-buttons {
+    column-gap: 30px;
+}
+.serv-port-buttons .select-a-service-buttons button {
+    padding: 15px 25px;
+    font-size: 1.5rem;
+}
+#portfolio-buttons .select-a-service-buttons {
+    column-gap: 30px;
+}
+#portfolio-buttons .select-a-service-buttons button {
+    padding: 15px 25px;
+}
+#portfolio-buttons .select-a-service-buttons button a {
+    font-size: 1.5rem;
+}
+/* ---------- #contact-hero ---------- */
+#contact-hero {
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 4vw;
+    padding: 30px 5vw 0 5vw;
+    row-gap: 30px;
+}
+#contact-hero .header-cont {
+    flex: 0 0 100%;
+    padding: 10px 7vw 0 7vw;
+}
+#contact-hero .header-cont h1 {
+    font-size: var(--h1);
+}
+#contact-hero > img {
+    width: 45vw;
+    max-width: 600px;
+}
+.contact-hero-content {
+    width: clamp(280px, 42%, 520px);
+}
 
 
 }
@@ -321,7 +740,7 @@ button img {
  /*     ---------------------------------------
         ---------------------------------------
         ---------------------------------------
-        -----------DESKTOP/LAPTOP--------------
+        -------DESKTOP/LAPTOP (1024px)---------
         ---------------------------------------
         ---------------------------------------
         ---------------------------------------  */
@@ -357,7 +776,47 @@ button img {
 @media only screen and (min-width: 1115px) {
   #hero .hero-content {
     width: 45vw;
-}  
+}
+}
+@media only screen and (min-width: 1075px) {
+    .navigation .logo {
+        margin-left: clamp(115px, 11%, 200px);
+    }
+    #menu {
+        margin-right: clamp(100px, 12%, 185px);
+    }
+    .navigation .nav-menu {
+        column-gap: 35px;
+    }
+}
+/* ---------- #about-hero ---------- */
+#about-hero .hero-content {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+#about-hero .hero-content h1 {
+    order: -2;
+}
+#about-hero .hero-content p {
+    order: -1;
+}
+#about-hero .hero-content picture:nth-of-type(1) {
+    width: 47vw;
+}
+#about-hero .hero-content picture:nth-of-type(2) {
+    width: 40vw;
+}
+/* ---------- #contact-hero ---------- */
+#contact-hero > img {
+    max-width: 550px;
+}
+.contact-hero-content {
+    max-width: 500px;
+}
+
+
 }
 
 
@@ -373,3 +832,4 @@ button img {
 
 
 }
+

@@ -1,3 +1,30 @@
+const decks = document.querySelector('#decks-btn');
+const garages = document.querySelector('#garages-btn');
+const additions = document.querySelector('#additions-btn');
+const body = document.querySelector('body');
+
+const toggleGarages = () => {
+  body.classList.toggle('show-garages');
+  if (body.classList.contains("show-additions")) {
+    body.classList.remove("show-additions");
+  }
+}
+const toggleAdditions = () => {
+  body.classList.toggle('show-additions');
+  if (body.classList.contains("show-garages")) {
+    body.classList.remove("show-garages");
+  }
+}
+const toggleDecks = () => {
+  body.classList.remove('show-additions', 'show-garages');
+}
+decks.addEventListener('click', toggleDecks);
+
+garages.addEventListener('click', toggleGarages);
+
+additions.addEventListener('click', toggleAdditions);
+
+
 
 
 window.addEventListener('load', async () => {
@@ -9,15 +36,15 @@ window.addEventListener('load', async () => {
     ]);
     renderPortfolio(decks,
       document.querySelector('.services-decks'),
-      'portfolio.html#port-decks'
+      'decks'
     );
     renderPortfolio(garages,
       document.querySelector('.services-garages'),
-      'portfolio.html#port-garages'
+      'garages'
     );
     renderPortfolio(additions,
       document.querySelector('.services-additions'),
-      'portfolio.html#port-additions'
+      'additions'
     );
 
   } catch (err) {
@@ -25,7 +52,7 @@ window.addEventListener('load', async () => {
   }
 });
 
-function renderPortfolio(wpProjects, container, hrefs = '') {
+function renderPortfolio(wpProjects, container, categoryKey = '', hrefs = '') {
   wpProjects.forEach((project, index) => {
     const projNumber = index + 1;
 
@@ -43,7 +70,7 @@ function renderPortfolio(wpProjects, container, hrefs = '') {
 
     const btn = document.createElement('button');
     const link = document.createElement('a');
-    link.href = hrefs || 'portfolio.html';
+    link.href = `portfolio.html?category=${categoryKey}&project=${projNumber}`;
     link.innerHTML = `<span>View Project Gallery</span><img src="btn-arrow.svg" alt="" width="20px" height="20px">`;
     btn.classList.add('project-btn');
     btn.appendChild(link);

@@ -1,5 +1,40 @@
+const decks = document.querySelector('#port-decks-btn');
+const garages = document.querySelector('#port-garages-btn');
+const additions = document.querySelector('#port-additions-btn');
+const misc = document.querySelector('#port-misc-btn');
+const body = document.querySelector('body');
 
-// const projects = document.querySelector('#portfolio');
+const toggleGarages = () => {
+  body.classList.add('port-garages');
+  if (body.classList.contains("port-additions") ||
+    body.classList.contains('port-misc')) {
+    body.classList.remove('port-additions', 'port-misc');
+  }
+}
+const toggleAdditions = () => {
+  body.classList.add('port-additions');
+  if (body.classList.contains("port-garages") ||
+    body.classList.contains('port-misc')) {
+    body.classList.remove('port-garages', 'port-misc');
+  }
+}
+const toggleMisc = () => {
+  body.classList.add('port-misc');
+  if (body.classList.contains("port-garages") ||
+    body.classList.contains('port-additions')) {
+    body.classList.remove('port-garages', 'port-additions');
+  }
+}
+const toggleDecks = () => {
+  body.classList.remove('port-additions', 'port-garages', 'port-misc');
+}
+decks.addEventListener('click', toggleDecks);
+
+garages.addEventListener('click', toggleGarages);
+
+additions.addEventListener('click', toggleAdditions);
+
+misc.addEventListener('click', toggleMisc);
 
 window.addEventListener('load', async () => {
   try {
@@ -21,7 +56,33 @@ window.addEventListener('load', async () => {
     	'addition');
     renderPortfolio(misc,
     	document.querySelector('.misc-gallery'),
-    	'misc.');
+    	'misc');
+    const params = new URLSearchParams(window.location.search);
+    const targetCategory = params.get('category');
+    const targetProject = parseInt(params.get('project'));
+
+    if (targetCategory && targetProject) {
+      const categoryMap = {
+        decks: { toggle: toggleDecks, selector: '.decks-gallery' },
+        garages: { toggle: toggleGarages, selector: '.garages-gallery' },
+        additions: { toggle: toggleAdditions, selector: '.additions-gallery' },
+      };
+      const entry = categoryMap[targetCategory];
+      if (entry) {
+        entry.toggle();
+        const gallery = document.querySelector(entry.selector);
+        const projectDiv = gallery?.querySelector(`.project-${targetProject}`);
+        const jsBtn = projectDiv?.querySelector('.project-btn');
+
+        if (jsBtn) {
+          jsBtn.click();
+
+          setTimeout(() => {
+            projectDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      }
+    }
   } catch (err) {
     console.error('Error loading api\'s', err);
   }
@@ -45,8 +106,17 @@ function renderPortfolio(wpProjects, container, spanTxt = '') {
     category.innerText = spanTxt;
     section.appendChild(category);
 
-    if (project.description) section.appendChild(project.description);
+    const closeXBox = document.createElement('div');
+    closeXBox.classList.add('close-x-box');
+    project.gallery.appendChild(closeXBox)
+    const closeX1 = document.createElement('span');
+    closeX1.classList.add('close-gallery-top1');
+    closeXBox.appendChild(closeX1);
+    const closeX2 = document.createElement('span');
+    closeX2.classList.add('close-gallery-top2');
+    closeXBox.appendChild(closeX2);
 
+    if (project.description) section.appendChild(project.description);
 
     container.appendChild(section);
     section.appendChild(project.gallery);
@@ -102,6 +172,7 @@ function renderPortfolio(wpProjects, container, spanTxt = '') {
     bottomBtn.classList.add('bottom-btn');
     project.gallery.appendChild(bottomBtn);
     bottomBtn.addEventListener('click', btnEvent);
+    closeXBox.addEventListener('click', btnEvent);
 
     // Resize observer
     const resizeObserver = new ResizeObserver(entries => {

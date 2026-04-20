@@ -52,6 +52,7 @@
     --portfolioHeight: 500px;
 }
 /** {border: solid red 1px !important;}*/
+
 * {box-sizing: border-box;}
 
 body {
@@ -99,16 +100,16 @@ button {
     font-size: 1.5rem;
     text-align: center;
     border: none;
+    cursor: pointer;
+}
+section {
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 
-
  /*     ---------------------------------------
-        ---------------------------------------
-        ---------------------------------------
         ----------MOBILE iPhone/ONLY-----------
-        ---------------------------------------
-        ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 0rem) {
 button a {
@@ -128,6 +129,7 @@ button img {
 .header-cont p {
     margin: 0;
     text-align: center;
+    width: 85vw;
 }
 
 #services {
@@ -404,7 +406,8 @@ button img {
 #location .location-image img {
     width: 95vw;
     height: auto;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+    object-position: 30px;
 }
 #location button {
     margin: 0 auto;
@@ -416,6 +419,8 @@ button img {
     row-gap: 45px;
     width: 90vw;
     justify-content: center;
+    align-items: center;
+    column-gap: 30px;
 }
 #home-gallery .home-gallery-card {
     display: flex;
@@ -447,13 +452,17 @@ button img {
 }
 #reviews {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     align-items: center;
-    row-gap: 25px;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin: 0 auto 50px auto;
 }
 #reviews h2 {
+    width: 90vw;
     text-align: center;
-    padding: 10vw 0;
+    padding: 30px 0;
 }
 #reviews .review-card {
     width: 75vw;
@@ -486,9 +495,9 @@ button img {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    width: 90vw;
+    width: 90%;
     background-color: #e9e9e9;
-    padding: 20px;
+    padding: 30px 20px;
     margin: 30px auto;
     row-gap: 27px;
     border-radius: 15px;
@@ -528,10 +537,10 @@ button img {
 
 
 
-
-
 footer {
     width: 100vw;
+    max-width: var(--max);
+    margin: 0 auto;
     background-color: var(--secondary);
     color: #fff;
     display: flex;
@@ -546,6 +555,9 @@ footer .footer-company {
     justify-content: center;
     padding: 25px 0 0 0;
     margin: 0 auto;
+}
+footer .footer-company strong {
+    text-align: center;
 }
 footer .footer-company strong a {
     color: #fff;
@@ -625,103 +637,15 @@ footer .harvest-clicks span a {
 
 
 /*     ---------------------------------------
-       ---------------------------------------
        -------Interior pages iPhone/ONLY------
-       ---------------------------------------
        --------------------------------------- */
-.portfolio-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
-    width: 90vw;
-}
-#portfolio {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-    row-gap: 40px;
-}
-.project {
-    width:100%;
-    display: flex;
-    row-gap: 25px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.portfolio-cont .project h2, .portfolio-cont .project p {
-    margin: 0;
-}
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-.wp-block-gallery {
-    width: 95vw;
-    background-color: #fff;
-    position: absolute;
-    top: var(--portfolioHeight);
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 20px;
-    padding: 30px 0;
-    margin: 40px 0;
-    border: var(--primary) solid 2.5px;
-    border-top: var(--primary) solid 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px 10px var(--primaryLight);
-}
-.wp-block-image {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 15px;
-}
-.wp-block-gallery img {
-    width: 85%;
-}
-.project button span {
-    white-space: nowrap;
-}
-.project button {
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    align-items: center;
-}
-.project button img {
-    width: 1rem;
-}
-.portfolio-open img {
-    transform: rotate(90deg);
-}
-.bottom-btn {
-    background-color: inherit;
-    border: var(--primary) solid 2.75px;
-    color: var(--primary);
-}
-.bottom-btn img {
-    transform: rotate(-90deg);
-}
-.hidden {
-    display: none;
-}
+
 
 
 }
 
  /*     ---------------------------------------
-        ---------------------------------------
-        ---------------------------------------
         --------MOBILE iPAD/only (772px)-------
-        ---------------------------------------
-        ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 48.3rem) {
 #services .service-cards {
@@ -730,6 +654,10 @@ footer .harvest-clicks span a {
 }
 #services .service-card {
     width: 27vw;
+}
+#services .service-card div .cards-icon {
+    top: 20px;
+    left: 20px;
 }
 #about .icons-cont {
     flex-flow: row wrap;
@@ -776,27 +704,38 @@ footer .harvest-clicks span a {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    column-gap: 50px;
 }
 #location .location-content {
-    width: 45vw;
+    width: clamp(300px, 45%, 550px);
 }
 #location .location-image img {
     width: 45vw;
+    max-width: 675px;
 }
+#location button {
+    margin-top: 50px;
+}
+#home-gallery .home-gallery-card {
+    width: 40vw;
+}
+#reviews .review-card {
+    width: 30%;
+}
+
 
 
 
 }
 
  /*     ---------------------------------------
-        ---------------------------------------
-        ---------------------------------------
         -----------DESKTOP/LAPTOP--------------
-        ---------------------------------------
-        ---------------------------------------
         ---------------------------------------  */
 @media only screen and (min-width: 64rem) {
-.services-content ul li {
+#hero .hero-content {
+    top: clamp(380px, 38vw, 580px);
+}    
+/*.services-content ul li {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -807,19 +746,1085 @@ footer .harvest-clicks span a {
     height: 5px;
     border-radius: 50%;
     background-color: var(--primary);
+}*/
+#about .about-icon-block {
+    height: 175px;
+    max-width: 375px;
 }
+#about .about-image-block {
+    height: 220px;
+    max-width: 575px;
+}
+#reviews .review-card {
+    width: 28%;
+}
+footer {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+footer .footer-company, footer .footer-contact,
+footer .footer-links {
+    width: calc(33% - 60px);
+    margin: 0;
+}
+
+
+}
+
+
+
 /*     ---------------------------------------
-       ---------------------------------------
        ---------Home Page desktop/ONLY--------
-       ---------------------------------------
        --------------------------------------- */
-
-}
 @media only screen and (min-width: 1150px) {
-
+#about .image-block-cont {
+    column-gap: 55px;
+}
 
 
 }
+
+
+/*Claude addition to About 
+
+/* ================================================
+   ------------------ABOUT PAGE -------------------
+   ================================================ */
+
+
+/* -----------------------------------------------
+   MOBILE (min-width: 0rem) — base styles
+   ----------------------------------------------- */
+@media only screen and (min-width: 0rem) {
+
+/* ---------- #about-mission ---------- */
+#about-mission {
+    margin: 0 auto;
+    padding: 30px 5vw 40px 5vw;
+    background-color: var(--grayBackgrd);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5vw;
+}
+#about-mission .header-cont {
+    flex: 0 0 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+}
+#about-mission .header-cont h2 {
+    width: 100%;
+    margin-bottom: 8px;
+}
+#about-mission .header-cont p {
+    margin: 0;
+    width: 85vw;
+}
+#about-mission .about-mission-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 25px 20px;
+}
+#about-mission .about-mission-card picture {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primaryLight);
+    border-radius: 10px;
+    padding: 10px;
+}
+#about-mission .about-mission-card picture img {
+    width: 100%;
+    height: auto;
+}
+#about-mission .about-mission-card h3,
+#about-mission .about-mission-card p {
+    margin: 0;
+}
+
+/* ---------- #about-process ---------- */
+#about-process {
+    margin: 0;
+    width: 100vw;
+    padding: 30px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+}
+#about-process .header-cont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0 7vw;
+    text-align: center;
+    width: 100%;
+}
+#about-process .header-cont h2 {
+    width: 100%;
+    margin-bottom: 8px;
+}
+#about-process .header-cont p {
+    margin: 0;
+    width: 85vw;
+}
+#about-process .about-process-card {
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+    width: 87%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+#about-process .about-process-card strong {
+    font-size: 2rem;
+    color: var(--primaryLight);
+}
+#about-process .about-process-card h3,
+#about-process .about-process-card p {
+    margin: 0;
+}
+#about-process button {
+    margin: 10px auto 0 auto;
+    align-items: center;
+}
+#about-process button a {
+    font-size: var(--m-btn);
+    color: #fff;
+}
+#about-process button img {
+    width: var(--m-btn);
+    height: auto;
+}
+
+
+/* ---------- #about-location ---------- */
+#about-location {
+    margin: 30px auto;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+#about-location h2 {
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+#about-location picture:nth-child(2) {
+    width: 95vw;
+}
+#about-location picture:nth-child(2) img {
+    width: 100%;
+    height: auto;
+    object-position: 35px;
+    overflow: hidden;
+}
+.about-location-towns {
+    width: 90vw;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    color: #000;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+.about-location-header-icon {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    row-gap: 15px;
+    column-gap: 20px;
+}
+.about-location-header-icon picture {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+}
+.about-location-header-icon picture img {
+    width: 100%;
+    height: auto;
+}
+.about-location-header-icon div h3,
+.about-location-header-icon div p {
+    color: #000;
+    margin: 0;
+}
+.about-locations-towns-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px 5vw;
+}
+.about-locations-towns-list span {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #000;
+    font-size: var(--p);
+    width: 100%;
+}
+.about-locations-towns-list span img {
+    width: 20px;
+    height: auto;
+    flex-shrink: 0;
+}
+.about-location-note {
+    width: 99%;
+    background-color: var(--primaryLight);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+.about-location-note span {
+    font-size: calc(var(--p) - 0.6vw);
+}
+
+
+/* ---------- #about-trust-us ---------- */
+#about-trust-us {
+    margin: 0;
+    padding: 30px 0 50px 0;
+    width: 100vw;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    color: #fff;
+}
+.trust-us-content {
+    width: 87vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.trust-us-content h2,
+.trust-us-content p {
+    margin: 0;
+    color: #fff;
+}
+.trust-us-content span {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    font-size: var(--p);
+}
+.trust-us-content span img {
+    width: 24px;
+    height: auto;
+    flex-shrink: 0;
+}
+.trust-us-pics {
+    width: 87vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
+.trust-us-pics picture {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.trust-us-pics picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* ---------- #about-cta ---------- */
+#about-cta {
+    margin: 30px 0 0 0;
+    padding: 0 0 50px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+#about-cta h2 {
+    color: #000;
+    font-size: var(--m-h2);
+    margin: 20px 0 0 0;
+    text-align: center;
+    width: 85%;
+}
+#about-cta p {
+    color: #000;
+    width: 80%;
+    margin: 0;
+    text-align: center;
+}
+#about-cta div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 15px;
+}
+#about-cta button {
+    background-color: var(--primary);
+    align-items: center;
+}
+#about-cta button a {
+    color: #fff;
+    font-size: var(--m-btn);
+}
+#about-cta button:last-child {
+    background-color: var(--secondary);
+}
+#about-cta button:last-child a {
+    color: #fff;
+}
+
+} /* end mobile */
+
+
+/* -----------------------------------------------
+   TABLET (min-width: 48.3rem / ~772px)
+   ----------------------------------------------- */
+@media only screen and (min-width: 48.3rem) {
+
+
+/* ---------- #about-mission ---------- */
+#about-mission {
+    padding: 40px 4vw 55px 4vw;
+    gap: 3vw;
+}
+#about-mission .about-mission-card {
+    width: 42%;
+}
+
+
+/* ---------- #about-process ---------- */
+#about-process {
+    flex-flow: row wrap;
+    column-gap: 50px;
+    justify-content: center;
+    padding-bottom: 55px;
+}
+#about-process .header-cont {
+    margin-bottom: 10px;
+}
+#about-process .about-process-card {
+    width: 40%;
+}
+#about-process button {
+    margin-top: 15px;
+}
+
+
+/* ---------- #about-location ---------- */
+#about-location {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 4vw;
+    padding: 40px 5vw;
+}
+#about-location h2 {
+    width: 100%;
+    text-align: center;
+}
+/*#about-location picture {
+    width: 85vw;
+}*/
+#about-location picture img {
+    width: 100%;
+}
+.about-locations-towns-list {
+    gap: 10px 0;
+}
+.about-locations-towns-list span {
+    width: calc(50% - 10px);
+}
+
+
+/* ---------- #about-trust-us ---------- */
+.trust-us-content {
+    width: 75vw;
+}
+.trust-us-pics {
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 40px;
+    width: 87vw;
+}
+.trust-us-pics picture {
+    width: calc(45% - 20px);
+}
+/*.trust-us-pics picture img {
+    height: 240px;
+}*/
+.trust-us-pics picture:nth-child(2) {
+    width: calc(55% - 20px);
+}
+
+
+/* ---------- #about-cta ---------- */
+#about-cta h2 {
+    font-size: var(--h2);
+}
+
+} /* end tablet */
+
+
+/* -----------------------------------------------
+   DESKTOP (min-width: 64rem / 1024px)
+   ----------------------------------------------- */
+@media only screen and (min-width: 64rem) {
+
+/* ---------- #about-mission ---------- */
+#about-mission {
+    gap: 2vw;
+    padding: 55px 3vw;
+}
+#about-mission .about-mission-card {
+    width: calc(46% - 1vw);
+    /*min-width: 220px;*/
+}
+
+
+/* ---------- #about-process ---------- */
+#about-process .about-process-card {
+    width: 37%;
+    max-width: 600px;
+}
+
+
+/* ---------- #about-location ---------- */
+.about-location-note {
+    max-width: 897px;
+}
+
+
+/* ---------- #about-trust-us ---------- */
+#about-trust-us {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 60px;
+    padding: 55px 5vw;
+}
+.trust-us-content {
+    /*width: clamp(300px, 38%, 520px);*/
+}
+.trust-us-pics {
+    /*flex-flow: column nowrap;
+    width: clamp(300px, 48%, 650px);*/
+    row-gap: 20px;
+}
+.trust-us-pics picture {
+    
+}
+.trust-us-pics picture img {
+    
+}
+
+} /* end desktop */
+
+/* -----------------------------------------------
+   -------------mobile (min-width: 0)
+   ----------------------------------------------- */
+@media only screen and (min-width: 0rem) {
+
+/* ---------- #services-sections ---------- */
+#garages {
+    display: none;
+}
+#additions {
+    display: none;
+}
+.show-garages #decks {
+    display: none;
+}
+.show-additions #decks {
+    display: none;
+}
+.show-garages #garages {
+    display: inherit;
+}
+.show-additions #additions {
+    display: inherit;
+}
+
+/* ---------- #services-hero content ---------- */
+.services-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0 5vw;
+}
+.services-content div ul li {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    row-gap: 5px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+.services-content div ul li span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--primary);
+    margin: 0 5px 0 -12px;
+}
+.services-content div ul li strong {
+    width: 80%;
+}
+.services-gallery-cont strong {
+    display: block;
+    text-align: center;
+    font-size: var(--m-h1);
+    margin-bottom: 40px;
+    width: 80vw;
+}
+.services-gallery-cont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 55px;
+    margin: 0 auto;
+}
+.project {
+    margin: 0 auto 50px auto;
+    padding: 0 0 30px 0;
+    border-radius: 20px;
+    width: 90%;
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 15px 15px -1px rgba(0, 0, 0, 0.1);
+}
+.project h3 {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.project h3, .project p {
+    margin: 0;
+}
+.project p {
+    padding: 0 20px;
+}
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.project .close-x-box {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 85%;
+}
+.project .close-gallery-top1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 40px;
+    border-radius: 5px;
+    transform: rotate(40deg);
+    background-color: #545454;
+}
+.project .close-gallery-top2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 40px;
+    border-radius: 5px;
+    transform: rotate(-40deg);
+    background-color: #545454;
+}
+.wp-block-gallery {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    position: fixed;
+    top: -16px;
+    left: -40px;
+    overflow-y: scroll;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 80px 0 30px 0;
+}
+.wp-block-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+.wp-block-gallery img {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+}
+.project button span {
+    white-space: nowrap;
+}
+.project button {
+    font-size: 1rem;
+    font-weight: 600;
+    align-items: center;
+}
+.project button a {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.project button img {
+    width: var(--m-btn);
+    height: auto;
+}
+.portfolio-open img {
+    transform: rotate(90deg);
+}
+.bottom-btn {
+    background-color: inherit;
+    border: var(--primary) solid 2.75px;
+    color: var(--primary);
+}
+.bottom-btn img {
+    transform: rotate(-90deg);
+}
+.hidden {
+    display: none;
+}
+
+}
+/* -----------------------------------------------
+   TABLET (min-width: 48.3rem / ~772px)
+   ----------------------------------------------- */
+@media only screen and (min-width: 48.3rem) {
+    .project {
+        width: 40vw;
+    }
+    .services-content div ul li {
+        font-size: var(--p);
+        padding-left: 18px;
+    }
+    .services-content div ul li span {
+        margin: 0 9px 0 -16px;
+    }
+    .project h3 {
+    top: -50px;
+    }
+}
+/* -----------------------------------------------
+   Desktop (min-width: 1050px)
+   ----------------------------------------------- */
+@media only screen and (min-width: 1050px) {
+    .serv-port-buttons .select-a-service-buttons {
+        column-gap: 50px;
+     }
+     .serv-port-buttons .select-a-service-buttons button {
+        padding: 15px 25px;
+        font-size: 1.5rem;
+     }
+    .project {
+        width: 37vw;
+    }
+    .services-gallery-cont {
+        padding: 0 30px;
+        column-gap: 30px;
+    }
+}
+/* -----------------------------------------------
+                mobile (min-width: 0)
+   ----------------------------------------------- */
+   /*--------------portfolio-section--------------*/
+@media only screen and (min-width: 0rem) {
+    .port-garages #port-garages {
+        display: flex;
+    }
+    .port-additions #port-additions {
+        display: flex;
+    }
+    .port-misc #port-misc {
+        display: flex;
+    }
+    .portfolio-cont {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        margin: 50px auto 0 auto;
+        width: 90vw;
+        row-gap: 30px;
+    }
+    .project span:nth-child(3) {
+        background-color: var(--primaryLight);
+        padding: 5px 9px;
+        border-radius: 15px;
+    }
+}
+/* -----------------------------------------------
+                tablet (min-width: 772)
+   ----------------------------------------------- */
+   /*--------------portfolio-section--------------*/
+@media only screen and (min-width: 48.3rem) {
+    .portfolio-cont {
+        row-gap: 50px;
+        column-gap: 30px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .project {
+        width: 27vw;
+    }
+}
+
+/* -----------------------------------------------
+   MOBILE (min-width: 0rem) — base styles
+   ----------------------------------------------- */
+@media only screen and (min-width: 0rem) {
+ 
+/* ---------- #contact-how-to-estimate ---------- */
+#contact-how-to-estimate {
+    margin: 0 auto;
+    padding: 30px 0 40px 0;
+    background-color: var(--grayBackgrd);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+#contact-how-to-estimate .header-cont {
+    text-align: center;
+    width: 100%;
+}
+#contact-how-to-estimate .header-cont h2 {
+    margin-bottom: 8px;
+}
+#contact-how-to-estimate .header-cont p {
+    margin: 0;
+    width: 85vw;
+}
+.contact-how-to-cards {
+    width: 87vw;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.contact-how-to-cards div {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.contact-how-to-cards div img {
+    width: 28px;
+    height: auto;
+    flex-shrink: 0;
+}
+.contact-how-to-cards div h3 {
+    margin: 0;
+}
+.contact-how-to-cards p {
+    margin: 0;
+}
+.contact-how-to-note {
+    width: 87vw;
+    background-color: var(--primaryLight);
+    border-radius: 10px;
+    border-left: solid 5px var(--primary);
+    padding: 15px 20px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 8px;
+    row-gap: 5px;
+    align-items: flex-start;
+}
+.contact-how-to-note strong {
+    font-size: var(--p);
+    flex-shrink: 0;
+}
+.contact-how-to-note span {
+    font-size: var(--p);
+}
+ 
+ 
+/* ---------- #contact-form-primer ---------- */
+#contact-form-primer {
+    margin: 0 auto;
+    padding: 30px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+}
+.contact-primer {
+    width: 87vw;
+    display: flex;
+    flex-direction: column;
+}
+.contact-primer > strong {
+    font-size: var(--p);
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.contact-primer h2 {
+    font-size: var(--m-h2);
+    margin: 0 0 20px 0;
+}
+.primer-content {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 10px;
+}
+.primer-content strong {
+    font-size: 2rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+.primer-content h3 {
+    margin: 0;
+}
+.contact-primer p {
+    margin: 0 0 0 0;
+}
+ 
+/* contact form */
+.contact-form {
+    width: 87vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    background-color: var(--grayBackgrd);
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.07);
+}
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    font-size: var(--p);
+    font-weight: 700;
+}
+.contact-form input,
+.contact-form textarea {
+    font-family: Inter;
+    font-size: calc(1rem + 0.1vw);
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1.5px solid var(--secondary);
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--third);
+}
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+.contact-form button {
+    margin: 5px auto 0 auto;
+    align-items: center;
+    font-size: var(--m-btn);
+    cursor: pointer;
+}
+.contact-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+ 
+ 
+/* ---------- #contact-soft-cta ---------- */
+#contact-soft-cta {
+    margin: 0;
+    padding: 10px 0 50px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+#contact-soft-cta strong {
+    color: var(--primary);
+    font-size: var(--p);
+    text-transform: uppercase;
+    background-color: var(--primaryLight);
+    border-radius: 25px;
+    padding: 7px 15px;
+}
+#contact-soft-cta h2 {
+    font-size: var(--m-h2);
+    margin: 0;
+    text-align: center;
+}
+#contact-soft-cta p {
+    width: 80%;
+    margin: 0;
+    text-align: center;
+}
+#contact-soft-cta ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 0;
+    width: 80%;
+}
+#contact-soft-cta ul li {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: var(--p);
+}
+#contact-soft-cta ul li span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--primary);
+}
+ 
+ 
+} /* end mobile */
+ 
+ 
+/* -----------------------------------------------
+   TABLET (min-width: 48.3rem / ~772px)
+   ----------------------------------------------- */
+@media only screen and (min-width: 48.3rem) { 
+ 
+/* ---------- #contact-how-to-estimate ---------- */
+#contact-how-to-estimate {
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 3vw;
+    row-gap: 3vw;
+    padding: 40px 5vw 55px 5vw;
+}
+#contact-how-to-estimate .header-cont {
+    flex: 0 0 100%;
+}
+.contact-how-to-cards {
+    width: 42%;
+}
+.contact-how-to-note {
+    width: 87vw;
+}
+ 
+ 
+/* ---------- #contact-form-primer ---------- */
+#contact-form-primer {
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 5vw;
+    padding: 55px 5vw;
+}
+.contact-primer {
+    width: clamp(260px, 38%, 480px);
+}
+.contact-primer h2 {
+    font-size: var(--h2);
+}
+.contact-form {
+    width: clamp(280px, 50%, 620px);
+}
+ 
+ 
+/* ---------- #contact-soft-cta ---------- */
+#contact-soft-cta h2 {
+    font-size: var(--h2);
+}
+ 
+ 
+} /* end tablet */
+ 
+ 
+/* -----------------------------------------------
+   DESKTOP (min-width: 64rem / 1024px)
+   ----------------------------------------------- */
+@media only screen and (min-width: 64rem) {
+  
+/* ---------- #contact-how-to-estimate ---------- */
+.contact-how-to-cards {
+    max-width: 475px;
+}
+#contact-how-to-estimate {
+    padding: 55px 3vw;
+}
+.contact-how-to-note {
+    max-width: 900px;
+    width: 70vw;
+}
+ 
+ 
+/* ---------- #contact-form-primer ---------- */
+#contact-form-primer {
+    column-gap: 60px;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.contact-primer {
+    max-width: 460px;
+}
+.contact-form {
+    max-width: 620px;
+}
+ 
+ 
+/* ---------- #contact-soft-cta ---------- */
+#contact-soft-cta ul {
+    width: 60%;
+    max-width: 600px;
+}
+#contact-soft-cta p {
+    max-width: 700px;
+}
+ 
+ 
+} /* end desktop */
+ 
+
+
 
 
 

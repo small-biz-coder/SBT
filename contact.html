@@ -39,7 +39,7 @@
 <section id="contact-hero">
     <div class="header-cont">
         <h1>Get In Touch</h1>
-        <p>Ready to start your project? Contact us for a free consultation and quote</p>
+        <p>Ready to start your project? Contact us for a free consultation and quote.</p>
     </div>
     <img src="pa-md-map.svg" width="750px" height="" decoding="async" alt="">
     <div class="contact-hero-content">
@@ -159,41 +159,6 @@
     </form>
 </section>
 
-<section id="faqs">
-    <h2>Frequently Asked Questions</h2>
-    <div class="question-cont">
-        <span class="question">
-            <strong>How long does a typical project take to complete?</strong>
-            <img src="ChevronDown.svg" width="30px" height="30px" decoding="async" loading="lazy" alt="">
-        </span>
-        <span class="answer">2 - 4 weeks, depending on what type of project it is. We will have a better estimate of the timing once we get a quote for you.</span>
-    </div>
-    <div class="question-cont">
-        <span class="question">
-            <strong>What is your payment schedule like?</strong>
-            <img src="ChevronDown.svg" width="30px" height="30px" decoding="async" loading="lazy" alt="">
-        </span>
-        <span class="answer">50% down when you sign the contract, the rest is paid when the project is complete. *There are exceptions for large projects.</span>
-    </div>
-    <div class="question-cont">
-        <span class="question">
-            <strong>What happens if something goes wrong during the project?</strong>
-            <img src="ChevronDown.svg" width="30px" height="30px" decoding="async" loading="lazy" alt="">
-        </span>
-        <span class="answer">We re well insured, and will make sure to fix anything we broke, and work with you to solve any problems that are unforeseen.</span>
-    </div>
-    <div class="question-cont">
-        <span class="question">
-            <strong>Do you take care of permits?</strong>
-            <img src="ChevronDown.svg" width="30px" height="30px" decoding="async" loading="lazy" alt="">
-        </span>
-        <span class="answer">Yes. We will need information about your property, but we submit all the paperwork on your behalf.</span>
-    </div>
-    <button>
-        <img src="phone-icon.svg" width="40px" height="40px" decoding="async" loading="lazy" alt="">
-        <a href="tel:+17179407909">Give Us a Call</a>
-    </button>
-</section>
 
 <section id="contact-soft-cta">
     <strong>OUR WORK</strong>
@@ -241,18 +206,7 @@
 </footer>
 
 <script type="text/javascript" src="script.js"></script>
-<script>
-    const faqs = document.querySelectorAll('.question-cont');
 
-    faqs.forEach(questions => {
-        questions.addEventListener('click', () => {
-            const answer = questions.querySelector('.answer')
-            const moveChevron = questions.querySelector('.question')
-            answer.classList.toggle('show-answer')
-            moveChevron.classList.toggle('move-chevron')
-        });
-    });
-</script>
 
 </body>
 </html>
