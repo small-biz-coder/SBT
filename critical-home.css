@@ -130,6 +130,8 @@ button img {
     box-shadow: 0 0 1px 3px var(--third);
     z-index: 1000;
     background-color: #fff;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 .navigation .logo {
     width: 90px;
@@ -222,7 +224,8 @@ button img {
     background-color: var(--grayBackgrd);
 }
 #hero picture {
-    width: 98vw;
+    width: calc(100vw - 10px);
+    max-width: 1490px;
     display: block;
     margin: 5px auto;
 }
@@ -288,6 +291,7 @@ button img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 30px 5vw;
     row-gap: 25px;
 }
@@ -407,6 +411,7 @@ button img {
 .services-hero .hero-pic {
     display: block;
     width: 100vw;
+    max-width: 1500px;
 }
 .services-hero .hero-pic img {
     width: 100%;
@@ -773,9 +778,13 @@ button img {
 .nav-menu .menu-cta a {
     font-size: 1rem;
 }
+#hero .hero-content {
+    top: clamp(380px, 38vw, 580px);
+}
 @media only screen and (min-width: 1115px) {
   #hero .hero-content {
     width: 45vw;
+    max-width: 675px;
 }
 }
 @media only screen and (min-width: 1075px) {
@@ -803,10 +812,10 @@ button img {
     order: -1;
 }
 #about-hero .hero-content picture:nth-of-type(1) {
-    width: 47vw;
+    width: 47%;
 }
 #about-hero .hero-content picture:nth-of-type(2) {
-    width: 40vw;
+    width: 40%;
 }
 /* ---------- #contact-hero ---------- */
 #contact-hero > img {

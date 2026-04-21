@@ -44,6 +44,7 @@
     --h2: calc(1.3rem + 1vw);
     --h3: calc(1rem + 0.6vw);
     --p: calc(1rem + 0.5vw);
+    --p2: calc(1rem + 0.2vw);
     --m-h1: 1.75rem;
     --m-h2: 1.5rem;
     --m-btn: 1.25rem;
@@ -87,6 +88,9 @@ h3 {
 }
 p {
     font-size: var(--p);
+}
+strong {
+    font-size: var(--p2);
 }
 button {
     display: flex;
@@ -200,7 +204,7 @@ button img {
     margin: 0 auto;
 }
 #about .icons-cont {
-    width: 90vw;
+    width: 90%;
     margin: 30px auto;
     display: flex;
     flex-direction: column;
@@ -275,9 +279,10 @@ button img {
     order: 1;
 }
 #home-services-cta {
-    margin: 30px 0 0 0;
+    margin: 30px auto 0 auto;
     padding: 10px 0 50px 0;
     width: 100vw;
+    max-width: 1500px;
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
@@ -303,7 +308,7 @@ button img {
     color: var(--primary);
 }
 #process {
-    margin: 0;
+    margin: 0 auto;
     width: 100vw;
     padding: 30px 0;
     display: flex;
@@ -654,6 +659,10 @@ footer .harvest-clicks span a {
 }
 #services .service-card {
     width: 27vw;
+    max-width: 405px;
+}
+#services .cards-list li {
+    font-size: var(--p2);
 }
 #services .service-card div .cards-icon {
     top: 20px;
@@ -666,6 +675,8 @@ footer .harvest-clicks span a {
 }
 #about .icons-w-content {
     width: 40vw;
+}#about .icons-w-content strong {
+    font-size: var(--p2);
 }
 #about .image-block-cont {
     flex-flow: row wrap;
@@ -677,6 +688,7 @@ footer .harvest-clicks span a {
 }
 #about .about-icon-block {
     width: 38%;
+    font-size: var(--h3);
 }
 #about .about-image-block {
     width: 53%;
@@ -708,6 +720,7 @@ footer .harvest-clicks span a {
 }
 #location .location-content {
     width: clamp(300px, 45%, 550px);
+    max-width: 550px;
 }
 #location .location-image img {
     width: 45vw;
@@ -717,7 +730,7 @@ footer .harvest-clicks span a {
     margin-top: 50px;
 }
 #home-gallery .home-gallery-card {
-    width: 40vw;
+    width: 40%;
 }
 #reviews .review-card {
     width: 30%;
@@ -731,22 +744,7 @@ footer .harvest-clicks span a {
  /*     ---------------------------------------
         -----------DESKTOP/LAPTOP--------------
         ---------------------------------------  */
-@media only screen and (min-width: 64rem) {
-#hero .hero-content {
-    top: clamp(380px, 38vw, 580px);
-}    
-/*.services-content ul li {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    width: 40vw;
-}
-.services-content ul li span {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: var(--primary);
-}*/
+@media only screen and (min-width: 64rem) {   
 #about .about-icon-block {
     height: 175px;
     max-width: 375px;
@@ -934,7 +932,7 @@ footer .footer-links {
     overflow: hidden;
 }
 .about-location-towns {
-    width: 90vw;
+    width: 90%;
     border-radius: 15px;
     background-color: #fff;
     display: flex;
@@ -1002,7 +1000,7 @@ footer .footer-links {
 
 /* ---------- #about-trust-us ---------- */
 #about-trust-us {
-    margin: 0;
+    margin: 0 auto;
     padding: 30px 0 50px 0;
     width: 100vw;
     background-color: var(--primary);
@@ -1056,7 +1054,7 @@ footer .footer-links {
 
 /* ---------- #about-cta ---------- */
 #about-cta {
-    margin: 30px 0 0 0;
+    margin: 30px auto 0 auto;
     padding: 0 0 50px 0;
     width: 100vw;
     display: flex;
@@ -1343,29 +1341,31 @@ footer .footer-links {
     border-radius: 20px 20px 0 0;
 }
 .project .close-x-box {
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     position: absolute;
-    top: 30px;
+    top: 25px;
     left: 85%;
 }
 .project .close-gallery-top1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 40px;
+    top: 45%;
+    left: 10%;
+    width: 40px;
+    height: 6px;
     border-radius: 5px;
-    transform: rotate(40deg);
+    transform: rotate(50deg);
     background-color: #545454;
 }
 .project .close-gallery-top2 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 40px;
+    top: 45%;
+    left: 10%;
+    width: 40px;
+    height: 6px;
     border-radius: 5px;
-    transform: rotate(-40deg);
+    transform: rotate(-50deg);
     background-color: #545454;
 }
 .wp-block-gallery {
@@ -1381,10 +1381,9 @@ footer .footer-links {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    padding: 80px 0 30px 0;
+    padding: 90px 0 30px 0;
 }
 .wp-block-image {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1506,6 +1505,7 @@ footer .footer-links {
 @media only screen and (min-width: 1200px) {
     .project {
         width: 27vw;
+        max-width: 432px;
     }
 }
 

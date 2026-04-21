@@ -66,6 +66,7 @@ window.addEventListener('load', async () => {
         decks: { toggle: toggleDecks, selector: '.decks-gallery' },
         garages: { toggle: toggleGarages, selector: '.garages-gallery' },
         additions: { toggle: toggleAdditions, selector: '.additions-gallery' },
+        misc: { toggle: toggleMisc, selector: '.misc-gallery' },
       };
       const entry = categoryMap[targetCategory];
       if (entry) {
@@ -79,7 +80,7 @@ window.addEventListener('load', async () => {
 
           setTimeout(() => {
             projectDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 100);
+          }, 50);
         }
       }
     }
