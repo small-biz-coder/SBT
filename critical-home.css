@@ -739,8 +739,12 @@ button img {
     width: clamp(280px, 42%, 520px);
 }
 
-
 }
+ @media only screen and (min-width: 1200px) {
+    .contact-hero-icon-cluster:nth-of-type(2) a {
+        font-size: var(--p);
+    }
+ }
 
  /*     ---------------------------------------
         ---------------------------------------
