@@ -12,7 +12,17 @@
     <noscript>
         <link rel="stylesheet" href="/css/local.css">
     </noscript>
-	
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+    // Enable submit button when reCAPTCHA is completed
+    function enableSubmit() {
+        document.getElementById('submitBtn').disabled = false; 
+
+    function disableSubmit() {
+        document.getElementById('submitBtn').disabled = true;
+    }
+    }
+</script>
 </head>
 <body>
 <header class="navigation">
@@ -115,9 +125,9 @@
         <label>Message
             <textarea type="textarea" name="message" placeholder="Tell us about your project" required></textarea>
         </label>
-        <!-- <div class="g-recaptcha" data-sitekey="6LehXNkrAAAAAJgk-bv1J0qMYEpopeLe1GlNeaTL" data-callback="enableSubmit" data-expired-callback="disableSubmit">
-        </div> -->
-        <button class="button" name="submit" type="submit" value="Submit" id="submitBtn">Send Message</button>
+        <div class="g-recaptcha" data-sitekey="6LeAXMQsAAAAACgED8QZg6ZNuOnPcB9KScXehpAj" data-callback="enableSubmit" data-expired-callback="disableSubmit">
+        </div>
+        <button class="button" name="submit" type="submit" value="Submit" id="submitBtn" disabled>Send Message</button>
     </form>
 </section>
 
