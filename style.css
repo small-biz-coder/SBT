@@ -1394,6 +1394,9 @@ footer .footer-links {
     height: auto;
     border-radius: 10px;
 }
+.wp-element-caption {
+    font-size: var(--p2);
+}
 .project button span {
     white-space: nowrap;
 }
@@ -1446,6 +1449,9 @@ footer .footer-links {
     }
     .project .close-x-box {
         left: 83%;
+    }
+    .wp-element-caption {
+    font-size: var(--p);
     }
 }
 /* -----------------------------------------------
