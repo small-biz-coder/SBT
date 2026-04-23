@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
         $mailTo = "andrew@harvestclicks.com";
         $subject = "New Message from Harvestclicks.com";
         $headers = "From: " . $mailFrom;
-        $txt = "You have received an E-mail from: " . $name . "\n\nE-MAIL: " . $mailFrom . "\nPHONE: " . $phone . "\n\n" . $message;
+        $txt = "You have received an E-mail from: " . $name . "\n\nE-MAIL: " . $mailFrom . "\nPHONE: " . $phone . "\nJob type: " . $service . "\n\n" . $message;
         
         if (mail($mailTo, $subject, $txt, $headers)) {
             header("Location: thank-you.html");
