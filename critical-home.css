@@ -231,6 +231,7 @@ button img {
 }
 #hero img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 #hero .hero-content {

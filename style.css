@@ -172,6 +172,7 @@ button img {
 }
 #services .service-card div .cards-hero img {
     width: 100%;
+    height: auto;
     border-radius: 20px 20px 0 0;
 }
 #services .service-card div .cards-icon {
@@ -689,6 +690,7 @@ footer .harvest-clicks span a {
 #about .about-icon-block {
     width: 38%;
     font-size: var(--h3);
+    align-self: center;
 }
 #about .about-image-block {
     width: 53%;
@@ -746,12 +748,15 @@ footer .harvest-clicks span a {
         ---------------------------------------  */
 @media only screen and (min-width: 64rem) {   
 #about .about-icon-block {
-    height: 175px;
+    height: 205px;
     max-width: 375px;
 }
 #about .about-image-block {
-    height: 220px;
+    height: 275px;
     max-width: 575px;
+}
+#about .image-block-cont .pic2 img {
+    object-position: 0 -90px;
 }
 #reviews .review-card {
     width: 28%;
@@ -783,10 +788,6 @@ footer .footer-links {
 
 
 }
-
-
-/*Claude addition to About 
-
 /* ================================================
    ------------------ABOUT PAGE -------------------
    ================================================ */
