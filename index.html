@@ -37,9 +37,11 @@
 </header>
 <section id="hero">
     <picture>
-        <source srcset="composite-deck-m.webp" media="(max-width: 772px)" type="image/webp">
-        <source srcset="composite-deck.webp" type="image/webp">
-        <img src="composite-deck.jpg" decoding="async" fetchpriority="high" width="1490px" height="1117.5px" alt="deck attached to back of house, with composite materials and viynl railings">
+        <source 
+        srcset="composite-deck-m.webp 772w, composite-deck.webp 1490w"
+        sizes="(max-width: 386px) 100vw, 1490px"
+        type="image/webp">
+        <img src="composite-deck.jpg" decoding="async" fetchpriority="high" width="1490" height="1117.5" alt="deck attached to back of house, built with composite materials and viynl railings">
     </picture>
     <div class="hero-content">
         <h1>Custom Decks, Garages & Home Additions in South-Central Pa</h1>
@@ -66,7 +68,7 @@
             <div>
                 <picture class="cards-hero">
                     <source srcset="deck-w-pavilion.webp" type="image/webp">
-                    <img src="deck-w-pavilion.jpg" decoding="async" loading="lazy" width="475px" height="303.75px" alt="">
+                    <img src="deck-w-pavilion.jpg" decoding="async" loading="lazy" width="475px" height="303.75px" alt="new deck with a pavilion attached to the back of the house">
                 </picture>
                 <img class="cards-icon" src="deck-icon.svg" decoding="async" loading="lazy" width="60px" height="60px" alt="">
             </div>
@@ -84,7 +86,7 @@
             <div>
                 <picture class="cards-hero">
                     <source srcset="garage-w-metal-siding.webp" type="image/webp">
-                    <img src="garage-w-metal-siding.jpg" decoding="async" loading="lazy" width="475px" height="303.75px" alt="">
+                    <img src="garage-w-metal-siding.jpg" decoding="async" loading="lazy" width="475px" height="303.75px" alt="detached two car garage">
                 </picture>
                 <img class="cards-icon" src="hammer-icon.svg" decoding="async" loading="lazy" width="60px" height="60px" alt="">
             </div>
@@ -102,7 +104,7 @@
             <div>
                 <picture class="cards-hero">
                     <source srcset="home-addition.webp" type="image/webp">
-                    <img src="home-addition.jpg" decoding="async" loading="lazy" width="450px" height="303.75px" alt="">
+                    <img src="home-addition.jpg" decoding="async" loading="lazy" width="450px" height="303.75px" alt="building of an addition to this house is in progress">
                 </picture>
                 <img class="cards-icon" src="house-icon.svg" decoding="async" loading="lazy" width="60px" height="60px" alt="">
             </div>
@@ -170,11 +172,11 @@
         </div>
         <picture class="about-image-block pic1">
             <source srcset="pole-barn-garage.webp" type="image/webp">
-            <img src="pole-barn-garage.jpg" decoding="async" loading="lazy" width="575px" height="431.25px" alt="">
+            <img src="pole-barn-garage.jpg" decoding="async" loading="lazy" width="575px" height="431.25px" alt="workshop/gargage with metal roof and siding">
         </picture>
         <picture class="about-image-block pic2">
             <source srcset="pool-deck.webp" type="image/webp">
-            <img src="pool-deck.jpg" decoding="async" loading="lazy" width="575px" height="431.25px" alt="">
+            <img src="pool-deck.jpg" decoding="async" loading="lazy" width="575px" height="431.25px" alt="deck built out of wooden materials next to this pool">
         </picture>
         <div class="about-icon-block blue-block">
             <strong>100's</strong>
@@ -277,7 +279,7 @@
     </div>
     <div class="location-image">
         <strong>Where We Travel</strong>
-        <img src="pa-md-map.svg" width="800px" height="" decoding="async" loading="lazy" alt="">
+        <img src="pa-md-map.svg" width="800px" height="" decoding="async" loading="lazy" alt="drawing of Pennsylvania and Maryland map with areas of services provided, highlighted">
     </div>
     <button>
         <a href="contact.html">Contact Us Today</a>
@@ -294,8 +296,8 @@
         <h3>Deck With Pavilion Remodel</h3>
         <p>We tore down an aging deck and pergola and replaced it with a brand new composite deck and custom pavilion. The result is a low-maintenance outdoor living space built to handle Pennsylvania weather for decades to come.</p>
         <div class="before-after-pics">
-            <img class="img1" src="old-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
-            <img class="img2" src="new-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
+            <img class="img1" src="old-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="an old deck in need of repair">
+            <img class="img2" src="new-deck-remodel.jpg" width="275px" height="" decoding="async" loading="lazy" alt="what the remodeled deck looks like">
         </div>
         <button>
             <a href="portfolio.html?category=decks&project=1">See Full Project</a>
@@ -306,8 +308,8 @@
         <h3>Full Exterior Renovation</h3>
         <p>This barn had seen better days. We updated everything on the outside. New metal siding, soffit, gutters, and entry-ways — giving it a clean, weather-tight finish that'll hold up for years. The transformation is like night and day.</p>
         <div class="before-after-pics">
-            <img class="img1" src="barn-renovation-old.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
-            <img class="img2" src="barn-renovation-new.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
+            <img class="img1" src="barn-renovation-old.jpg" width="275px" height="" decoding="async" loading="lazy" alt="old barn in need of new roof and siding">
+            <img class="img2" src="barn-renovation-new.jpg" width="275px" height="" decoding="async" loading="lazy" alt="old barn remodel, new sroof and siding">
         </div>
         <button>
             <a href="portfolio.html?category=misc&project=1">See Full Project</a>
@@ -318,8 +320,8 @@
         <h3>Front Door Entryway Cover</h3>
         <p>We built a solid wood framed portico for this entryway, adding both character and protection from the elements. A small addition that makes a big difference in curb appeal.</p>
         <div class="before-after-pics">
-            <img class="img1" src="portico.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
-            <img class="img2" src="portico-before.jpg" width="275px" height="" decoding="async" loading="lazy" alt="">
+            <img class="img1" src="portico-before.jpg" width="275px" height="" decoding="async" loading="lazy" alt="front door of a house before adding a portico">
+            <img class="img2" src="portico.jpg" width="275px" height="" decoding="async" loading="lazy" alt="new portico addition to an existing house">
         </div>
         <button>
             <a href="portfolio.html?category=additions&project=1">See Full Project</a>
@@ -351,8 +353,8 @@
             <img src="star-icon.svg" width="30px" height="30px" decoding="async" loading="lazy" alt="">
             <img src="star-icon.svg" width="30px" height="30px" decoding="async" loading="lazy" alt="">
         </div>
-        <p>Hi I want to recommend them, they did a great job with my barn. Gave it a completely new look. It was falling apart.</p>
-        <strong>Eric P.</strong>
+        <p>South Branch did an outstanding job building my 40x60 pole barn. Very detailed and fair prices. Will definitely use them in the future.</p>
+        <strong>Elmer F.</strong>
     </div>
     <div class="review-card">
         <img src="quote-icon.svg" width="50px" height="50px" decoding="async" loading="lazy" alt="">
@@ -415,6 +417,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61556932361892">Facebook</a></li>
     </ul>
     <ul class="footer-contact">
         <li>Get In Touch</li>
