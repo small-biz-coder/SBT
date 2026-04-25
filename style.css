@@ -94,10 +94,8 @@ strong {
 }
 button {
     display: flex;
-    column-gap: 8px;
     border-radius: 10px;
     background-color: var(--primary);
-    padding: 15px 25px;
     width: auto;
     height: auto;
     color: #fff;
@@ -105,6 +103,13 @@ button {
     text-align: center;
     border: none;
     cursor: pointer;
+}
+button a {
+    padding: 15px 25px;
+}
+button img {
+    margin-left: -17px;
+    margin-right: 20px;
 }
 section {
     max-width: 1500px;
