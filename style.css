@@ -138,7 +138,7 @@ button img {
 .header-cont p {
     margin: 0;
     text-align: center;
-    width: 85vw;
+    width: 85%;
 }
 
 #services {
@@ -545,6 +545,9 @@ button img {
     margin-top: 12px;
     padding-top: 10px;
 }
+#faqs button {
+    align-items: center;
+}
 
 
 
@@ -680,8 +683,9 @@ footer .harvest-clicks span a {
     margin: 55px auto;
 }
 #about .icons-w-content {
-    width: 40vw;
-}#about .icons-w-content strong {
+    width: 40%;
+}
+#about .icons-w-content strong {
     font-size: var(--p2);
 }
 #about .image-block-cont {
@@ -789,6 +793,7 @@ footer .footer-links {
 @media only screen and (min-width: 1150px) {
 #about .image-block-cont {
     column-gap: 55px;
+    max-width: 1500px;
 }
 
 
@@ -860,7 +865,7 @@ footer .footer-links {
 
 /* ---------- #about-process ---------- */
 #about-process {
-    margin: 0;
+    margin: 0 auto;
     width: 100vw;
     padding: 30px 0 50px 0;
     display: flex;
@@ -1406,15 +1411,23 @@ footer .footer-links {
 .project button span {
     white-space: nowrap;
 }
+.portfolio-cont .project button span {
+    padding: 15px 25px;
+}
 .project button {
     font-size: 1rem;
     font-weight: 600;
     align-items: center;
+    column-gap: 8px;
 }
 .project button a {
     display: flex;
     align-items: center;
     column-gap: 5px;
+}
+.project button a img {
+    margin: 0;
+    padding: 0;
 }
 .project button img {
     width: var(--m-btn);
@@ -1427,6 +1440,11 @@ footer .footer-links {
     background-color: inherit;
     border: var(--primary) solid 2.75px;
     color: var(--primary);
+    padding: 15px 25px;
+}
+.bottom-btn img {
+    margin: 0;
+    padding: 0;
 }
 .bottom-btn img {
     transform: rotate(-90deg);
@@ -1466,10 +1484,6 @@ footer .footer-links {
 @media only screen and (min-width: 1050px) {
     .serv-port-buttons .select-a-service-buttons {
         column-gap: 50px;
-     }
-     .serv-port-buttons .select-a-service-buttons button {
-        padding: 15px 25px;
-        font-size: 1.5rem;
      }
     .project {
         width: 37vw;
@@ -1693,7 +1707,7 @@ footer .footer-links {
  
 /* ---------- #contact-soft-cta ---------- */
 #contact-soft-cta {
-    margin: 0;
+    margin: 0 auto;
     padding: 10px 0 50px 0;
     width: 100vw;
     display: flex;

@@ -89,7 +89,6 @@ p {
 }
 button {
     display: flex;
-    column-gap: 8px;
     border-radius: 10px;
     background-color: var(--primary);
     width: auto;
@@ -286,14 +285,14 @@ button img {
     flex-flow: row wrap;
     justify-content: center;
     position: relative;
+}
+#about-hero > picture {
     width: 100%;
-    overflow: hidden;
 }
 #about-hero picture img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    display: block;
 }
 #about-hero .hero-content {
     display: flex;
@@ -367,7 +366,7 @@ button img {
     justify-content: center;
     column-gap: 15px;
 }
-.serv-port-buttons .select-a-service-buttons button {
+.serv-port-buttons .select-a-service-buttons button a {
     padding: 7px 15px;
     font-size: 1.3rem;
 }
@@ -446,7 +445,7 @@ button img {
 #portfolio-buttons .select-a-service-buttons {
     column-gap: 8px;
 }
-#portfolio-buttons .select-a-service-buttons button {
+#portfolio-buttons .select-a-service-buttons button a {
     padding: 7px 12px;
 }
 #portfolio-buttons .select-a-service-buttons button a {
@@ -711,7 +710,7 @@ button img {
 .serv-port-buttons .select-a-service-buttons {
     column-gap: 30px;
 }
-.serv-port-buttons .select-a-service-buttons button {
+.serv-port-buttons .select-a-service-buttons button a {
     padding: 15px 25px;
     font-size: 1.5rem;
 }
