@@ -15,31 +15,16 @@
 	
 </head>
 <body>
-<header class="navigation">
-    <a class="logo" href="index.html">
-        <img src="logo.svg" width="100" height="100" decoding="async" alt="south branch trades logo">
-    </a>
-    <div class="mobile-box">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-    </div> 
-    <nav id="menu">
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li class="menu-cta"><img src="phone-icon.svg" width="40" height="40" decoding="async" alt=""><a href="tel:+17179407909">717 940 7909</a></li>
-        </ul>
-    </nav>
+<header id="header"></header>
 
-</header>
 <section id="about-hero">
     <picture>
         <source 
-        srcset="garage-workshop-m.webp 672w, garage-workshop.webp 1490w"
-        sizes="(max-width: 772px) 100vw, 1008px"
+        srcset="garage-workshop-m.webp"
+        media="(max-width: 772px)"
+        type="image/webp">
+        <source
+        srcset="garage-workshop.webp"
         type="image/webp">
         <img src="garage-workshop.jpg" decoding="async" fetchpriority="high" width="1500" height="" alt="detached garage/workshop metal siding, pole barn">
     </picture>
@@ -206,36 +191,7 @@
     </div>
 </section>
 
-<footer>
-    <div class="footer-company">
-        <strong><a href="index.html">South Branch <span>Trades</span></a></strong>
-        <p>We're a small, owner-operated crew that builds custom outdoor structures for homeowners, decks, garages, sheds, and more. Big enough to handle the job, small enough to actually care about it.</p>
-    </div>
-    <ul class="footer-links">
-        <li>Quick Links</li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=61556932361892">Facebook</a></li>
-    </ul>
-    <ul class="footer-contact">
-        <li>Get In Touch</li>
-        <li><a href="tel:+17179407909">717 940 7909</a></li>
-        <li><a href="mailto:southbranchtrades@icloud.com">southbranchtrades@icloud.com</a></li>
-        <li>Licensed & Insured</li>
-    </ul>
-    <div class="copyright-hc-branding">
-        <div class="copyright-cont">
-            <img src="copyright-icon.svg" width="40" height="40" decoding="async" loading="lazy" alt="">
-            <span id="copyright"></span>
-            <span id="rights">All Rights Reserved</span>
-        </div>
-        <div class="harvest-clicks">
-            <span><a href="http://harvestclicks.com">Built by HARVEST CLICKS</a></span>
-        </div>
-    </div>
-</footer>
+<footer id="footer"></footer>
 
 <script src="script.js" type="module"></script>
 

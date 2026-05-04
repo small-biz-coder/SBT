@@ -20,9 +20,12 @@
 
 <section id="hero">
     <picture>
-        <source 
-        srcset="composite-deck-m.webp 772w, composite-deck.webp 1490w"
-        sizes="(max-width: 386px) 100vw, 1428px"
+        <source
+        media="(max-width: 772px)"
+        srcset="composite-deck-m.webp"
+        type="image/webp">
+        <source
+        srcset="composite-deck.webp"
         type="image/webp">
         <img src="composite-deck.jpg" decoding="async" fetchpriority="high" width="1490" height="1117.5" alt="deck attached to back of house, built with composite materials and viynl railings">
     </picture>
