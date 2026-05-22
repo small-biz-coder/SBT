@@ -9,6 +9,8 @@ async function loadComponent(selector, file) {
 await loadComponent('#header', '/partials/header.html');
 await loadComponent('#footer', '/partials/footer.html');
 
+document.querySelector('#copyright').innerText = 
+    `Copyright ${new Date().getFullYear()} South Branch Trades.`;
 
 //mobile navigation click, add date to copyright
 const nav = document.querySelector('.navigation');

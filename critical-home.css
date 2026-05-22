@@ -187,16 +187,19 @@ button img {
 }
 .mobile-menu-open .nav-menu {
     width: 95vw;
-    padding: 25px 0 30px 0;
+    padding: 35px 0 30px 0;
     display: flex;
     flex-direction: column;
-    row-gap: 11px;
+    row-gap: 20px;
     align-items: center;
     background-color: var(--primaryLight);
     border-radius: 20px;
     font-size: 2rem;
     font-weight: 700;
     margin: 0;
+}
+.mobile-menu-open .nav-menu li:nth-last-child(2) {
+    margin-bottom: 35px;
 }
 .nav-menu .menu-cta {
     border-radius: 10px;
@@ -446,72 +449,72 @@ button img {
     column-gap: 8px;
 }
 #portfolio-buttons .select-a-service-buttons button a {
-    padding: 7px 12px;
+    padding: 7px 7px;
 }
 #portfolio-buttons .select-a-service-buttons button a {
     font-size: 1rem;
 }
-.port-additions #port-decks-btn {
+.port-additions .port-decks-btn {
     background-color: #fff;
     border: 1px solid var(--primary);
 }
-.port-additions #port-decks-btn a {
+.port-additions .port-decks-btn a {
     color: var(--primary);
 }
-.port-garages #port-decks-btn {
+.port-garages .port-decks-btn {
     background-color: #fff;
     border: 1px solid var(--primary);
 }
-.port-garages #port-decks-btn a {
+.port-garages .port-decks-btn a {
     color: var(--primary);
 }
-.port-misc #port-decks-btn {
+.port-misc .port-decks-btn {
     background-color: #fff;
     border: 1px solid var(--primary);
 }
-.port-misc #port-decks-btn a {
+.port-misc .port-decks-btn a {
     color: var(--primary);
 }
-#port-garages-btn {
+.port-garages-btn {
     background-color: #fff;
     border: 1px solid var(--primary);
 }
-#port-garages-btn a {
+.port-garages-btn a {
     color: var(--primary);
 }
-.port-garages #port-garages-btn {
+.port-garages .port-garages-btn {
     background-color: var(--primary);
     border: none;
 }
-.port-garages #port-garages-btn a {
+.port-garages .port-garages-btn a {
     color: #fff;
 }
-#port-additions-btn {
+.port-additions-btn {
     background-color: #fff;
     border: 1px solid var(--primary);
 }
-#port-additions-btn a {
+.port-additions-btn a {
     color: var(--primary);
 }
-.port-additions #port-additions-btn {
+.port-additions .port-additions-btn {
     background-color: var(--primary);
     border: none;
 }
-.port-additions #port-additions-btn a {
+.port-additions .port-additions-btn a {
     color: #fff;
 }
-#port-misc-btn {
+.port-misc-btn {
     background-color: #fff;
     border: 1px solid var(--primary);
 }
-#port-misc-btn a {
+.port-misc-btn a {
     color: var(--primary);
 }
-.port-misc #port-misc-btn {
+.port-misc .port-misc-btn {
     background-color: var(--primary);
     border: none;
 }
-.port-misc #port-misc-btn a {
+.port-misc .port-misc-btn a {
     color: #fff;
 }
 #portfolio-buttons {
@@ -642,7 +645,16 @@ button img {
 }
 
 }
-
+@media only screen and (min-width: 400px) {
+     #portfolio-buttons .select-a-service-buttons {
+        column-gap: 15px;
+     }
+}
+@media only screen and (min-width: 460px) {
+     #portfolio-buttons .select-a-service-buttons button a {
+        padding: 7px 14px;
+     }
+}
 
  /*     ---------------------------------------
         ---------------------------------------
@@ -716,12 +728,11 @@ button img {
 }
 #portfolio-buttons .select-a-service-buttons {
     column-gap: 30px;
-}
-#portfolio-buttons .select-a-service-buttons button {
-    padding: 15px 25px;
+    margin: 35px 0 0 35px;
 }
 #portfolio-buttons .select-a-service-buttons button a {
     font-size: 1.5rem;
+    padding: 15px 25px;
 }
 /* ---------- #contact-hero ---------- */
 #contact-hero {

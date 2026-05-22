@@ -1,8 +1,6 @@
-const decks = document.querySelector('#port-decks-btn');
-const garages = document.querySelector('#port-garages-btn');
-const additions = document.querySelector('#port-additions-btn');
-const misc = document.querySelector('#port-misc-btn');
+
 const body = document.querySelector('body');
+
 
 const toggleGarages = () => {
   body.classList.add('port-garages');
@@ -26,15 +24,24 @@ const toggleMisc = () => {
   }
 }
 const toggleDecks = () => {
-  body.classList.remove('port-additions', 'port-garages', 'port-misc');
+  body.classList.remove('port-garages', 'port-additions', 'port-misc');
 }
-decks.addEventListener('click', toggleDecks);
 
-garages.addEventListener('click', toggleGarages);
+document.querySelectorAll('.port-decks-btn').forEach(btn => {
+    btn.addEventListener('click', toggleDecks);
+});
 
-additions.addEventListener('click', toggleAdditions);
+document.querySelectorAll('.port-garages-btn').forEach(btn => {
+    btn.addEventListener('click', toggleGarages);
+});
 
-misc.addEventListener('click', toggleMisc);
+document.querySelectorAll('.port-additions-btn').forEach(btn => {
+    btn.addEventListener('click', toggleAdditions);
+});
+
+document.querySelectorAll('.port-misc-btn').forEach(btn => {
+    btn.addEventListener('click', toggleMisc);
+});
 
 window.addEventListener('load', async () => {
   try {
