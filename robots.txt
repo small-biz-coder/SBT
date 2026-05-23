@@ -1,0 +1,20 @@
+User-agent: *
+User-agent:Googlebot
+User-agent:Googlebot-Mobile
+
+
+# Common directories that should typically be blocked
+Disallow: /thank-you.html/
+Disallow: /harvest-clicks-favicon.svg/
+Disallow: /harvest-clicks-favicon.ico/
+
+
+# Allow fetching of CSS and JS (important for Google's rendering)
+Allow: /*.css$
+Allow: /*.js$
+
+# Prevent crawling of common non-content files
+Disallow: /*.zip$
+
+# Sitemap location
+Sitemap: 

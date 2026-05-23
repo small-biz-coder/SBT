@@ -142,6 +142,7 @@ button img {
 .navigation .logo {
     width: 90px;
     height: 90px;
+    aspect-ratio: 90 / 90;
 }
 .navigation .logo img {
     width: 100%;
@@ -422,10 +423,12 @@ button img {
 .services-hero .hero-pic {
     display: block;
     width: 100vw;
+    aspect-ratio: 1500 / 1125;
     max-width: 1500px;
 }
 .services-hero .hero-pic img {
     width: 100%;
+    height: auto;
 }
 .services-hero .icon-pic {
     display: flex;
