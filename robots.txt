@@ -17,4 +17,4 @@ Allow: /*.js$
 Disallow: /*.zip$
 
 # Sitemap location
-Sitemap: 
+Sitemap: https://harvestclicks.com/sitemap.xml
