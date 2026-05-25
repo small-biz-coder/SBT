@@ -1430,6 +1430,7 @@ footer .footer-links {
     font-weight: 600;
     align-items: center;
     column-gap: 8px;
+    margin-bottom: 65px;
 }
 .project button a {
     display: flex;
