@@ -5,8 +5,8 @@ User-agent:Googlebot-Mobile
 
 # Common directories that should typically be blocked
 Disallow: /thank-you.html/
-Disallow: /harvest-clicks-favicon.svg/
-Disallow: /harvest-clicks-favicon.ico/
+Disallow: /south-branch-180favicon.ico/
+Disallow: /south-branch-favicon.ico/
 
 
 # Allow fetching of CSS and JS (important for Google's rendering)
