@@ -52,9 +52,10 @@ if (isset($_POST['submit'])) {
             exit;
         }
         
-        $mailTo = "andrew@harvestclicks.com";
-        $subject = "New Message from Harvestclicks.com";
-        $headers = "From: " . $mailFrom;
+        $mailTo = "southbranchtrades@icloud.com";
+        $subject = "New Message from Your Website";
+        $headers  = "From: noreply@southbranchtrades.com\r\n";
+        $headers .= "Reply-To: " . $mailFrom . "\r\n";
         $txt = "You have received an E-mail from: " . $name . "\n\nE-MAIL: " . $mailFrom . "\nPHONE: " . $phone . "\nJob type: " . $service . "\n\n" . $message;
         
         if (mail($mailTo, $subject, $txt, $headers)) {
